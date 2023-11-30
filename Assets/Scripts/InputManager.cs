@@ -17,6 +17,7 @@ public class InputManager : MonoBehaviour
     public void OnFire(InputValue value) => fire = Convert.ToBoolean( value.Get<float>());
     public void OnJump(InputValue value) => jump = Convert.ToBoolean(value.Get<float>());
     public void OnSprint(InputValue value) => sprint = Convert.ToBoolean(value.Get<float>());
+
  
 
 

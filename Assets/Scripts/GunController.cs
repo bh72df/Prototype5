@@ -7,6 +7,7 @@ public class GunController : MonoBehaviour
 
     public float fireRate = 0.5f; 
     private float nextFireTime = 0f;
+    [SerializeField] float bulletspeed = 1f;
 
     void Update()
     {
@@ -22,7 +23,7 @@ public class GunController : MonoBehaviour
 
         GameObject bullet = Instantiate(bulletPrefab, gunBarrel.position, gunBarrel.rotation);
 
-        bullet.GetComponent<Rigidbody>().AddForce(gunBarrel.forward * 50f, ForceMode.Impulse);
+        bullet.GetComponent<Rigidbody>().AddForce(gunBarrel.forward * bulletspeed, ForceMode.Impulse);
 
         Destroy(bullet, 2f);
     }
